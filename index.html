@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#241535">
+<title>Dana Khalid Hamdan | Personal Portfolio</title>
+<style>
+:root{--ink:#271a35;--purple:#38234e;--purple2:#6d4b86;--lav:#f2ebf7;--gold:#c6a45b;--gold2:#ead9a8;--cream:#fffdf9;--muted:#756b7d;--line:#e8deed;--shadow:0 18px 50px rgba(39,26,53,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#faf7fc;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}.topbar{position:sticky;top:0;z-index:10;background:rgba(36,21,53,.96);backdrop-filter:blur(12px);color:#fff;border-bottom:1px solid rgba(234,217,168,.25)}
+.nav{max-width:1160px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-family:Georgia,serif;letter-spacing:.04em;color:var(--gold2);font-size:1.08rem}.navlinks{display:flex;gap:17px;align-items:center;flex-wrap:wrap}.navlinks a{font-size:.82rem;color:#eee5f4;opacity:.9}.navlinks a:hover{color:var(--gold2)}.menu-btn{display:none;background:transparent;color:white;border:1px solid #806b91;border-radius:9px;padding:7px 10px}
+.hero{background:radial-gradient(circle at 82% 18%,#72568a 0,transparent 30%),linear-gradient(135deg,#241535,#3c2753 62%,#513a67);color:#fff;overflow:hidden;position:relative}
+.hero:after{content:"✦   ✧      ✦       ✧";position:absolute;right:5%;top:15%;font-size:2.4rem;color:rgba(234,217,168,.32);letter-spacing:1rem;transform:rotate(-12deg)}
+.hero-inner{max-width:1160px;margin:auto;padding:92px 22px 86px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;position:relative;z-index:1}
+.eyebrow{color:var(--gold2);text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:700}.hero h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(2.8rem,6vw,5.3rem);line-height:1.03;margin:18px 0}.hero h1 span{color:var(--gold2);font-style:italic}.hero p{color:#e9dfef;max-width:620px;font-size:1.05rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border:1px solid var(--gold);border-radius:999px;padding:11px 19px;font-weight:700;font-size:.9rem;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s}.btn.primary{background:var(--gold2);color:#2d1e3c}.btn.ghost{color:#fff;background:transparent}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #160d2233}
+.hero-card{border:1px solid rgba(234,217,168,.45);border-radius:28px;padding:28px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.04));box-shadow:0 24px 70px #140b2066;max-width:360px;justify-self:center;text-align:center}
+.monogram{width:118px;height:118px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold);background:linear-gradient(145deg,#59406e,#2d1d40);font-family:Georgia,serif;font-size:2.1rem;color:var(--gold2);box-shadow:inset 0 0 0 7px #ffffff0a}
+.hero-card h2{font-family:Georgia,serif;font-weight:500;font-size:1.55rem;margin:0}.hero-card p{font-size:.85rem;margin:8px auto 0}
+main{max-width:1160px;margin:auto;padding:30px 22px 80px}.section{padding:58px 0;scroll-margin-top:75px}.section-head{margin-bottom:26px}.kicker{color:#8b6a9e;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.section h2{font-family:Georgia,serif;font-size:clamp(1.9rem,4vw,2.7rem);font-weight:500;margin:5px 0 8px;color:var(--purple)}.section-intro{color:var(--muted);max-width:720px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:var(--cream);border:1px solid var(--line);border-radius:19px;padding:23px;box-shadow:var(--shadow)}.card h3{margin:7px 0 8px;font-family:Georgia,serif;font-size:1.28rem;font-weight:600;color:var(--purple)}.card p{margin:0;color:#64596d;font-size:.94rem}.icon{width:42px;height:42px;border-radius:13px;background:var(--lav);display:grid;place-items:center;color:var(--purple2);font-size:1.25rem}
+.about{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.quote-card{background:var(--purple);color:white;border-radius:22px;padding:30px;display:flex;flex-direction:column;justify-content:center;min-height:240px}.quote-card blockquote{font-family:Georgia,serif;font-size:1.55rem;line-height:1.4;margin:0;color:var(--gold2)}.quote-card small{margin-top:20px;color:#e8ddec;letter-spacing:.14em;text-transform:uppercase}
+.art-row{display:grid;grid-template-columns:110px 1fr;gap:20px;align-items:center}.art-placeholder{height:120px;border-radius:16px;background:linear-gradient(145deg,#e8d8ee,#b79bc8 55%,#72568a);display:grid;place-items:center;font-size:2.4rem;color:#fff}.art-row+.art-row{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.pill{background:#f0e8f5;color:#604675;border:1px solid #e5d8ed;padding:7px 12px;border-radius:999px;font-size:.84rem;font-weight:650}
+.achievement{background:linear-gradient(135deg,#f4edf8,#fffaf0);border:1px solid #e8dcb9;border-radius:22px;padding:27px}.achievement strong{color:#785b27}
+.future{background:linear-gradient(135deg,#2c1b40,#563d6c);color:#fff;border-radius:24px;padding:34px;position:relative;overflow:hidden}.future h3{font-family:Georgia,serif;font-size:1.8rem;color:var(--gold2);font-weight:500;margin:0 0 10px}.future p{color:#eee5f4;max-width:800px;margin:0}.letter{background:#fffdf9;border:1px solid #e6d8b7;border-radius:20px;padding:28px;max-width:800px}.letter h3{font-family:Georgia,serif;color:#87672e;font-size:1.5rem;margin:0 0 12px}
+footer{background:#241535;color:#e8dfed;text-align:center;padding:30px 18px}footer strong{color:var(--gold2);font-family:Georgia,serif;font-size:1.2rem}footer p{font-size:.82rem;margin:8px 0 0;color:#cbbdd6}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:760px){.hero-inner{grid-template-columns:1fr;padding-top:65px;text-align:center}.hero-card{margin-top:12px}.hero p{margin-left:auto;margin-right:auto}.hero-actions{justify-content:center}.grid{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.navlinks{display:none;position:absolute;top:58px;left:0;right:0;background:#241535;padding:18px 22px 22px;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu-btn{display:block}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.art-row{grid-template-columns:82px 1fr}.art-placeholder{height:95px}.section{padding:42px 0}.hero-inner{padding-left:18px;padding-right:18px}.nav{padding-left:18px;padding-right:18px}}
+@media print{.topbar,.hero-actions,.menu-btn{display:none!important}body{background:white}.hero{print-color-adjust:exact;-webkit-print-color-adjust:exact}.section{break-inside:avoid;padding:28px 0}.card,.quote-card,.future{box-shadow:none;break-inside:avoid}main{padding-top:0}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#home">DKH · Portfolio</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="navlinks" id="navlinks">
+      <a href="#about">About</a><a href="#personality">Personality</a><a href="#passions">Passions</a><a href="#skills">Skills</a><a href="#dreams">Dreams</a><a href="#future">Future Me</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">My personal student portfolio</div>
+      <h1>Hello, I'm<br><span>Dana Khalid Hamdan.</span></h1>
+      <p>A creative mind, an independent spirit and a person with big dreams. This is a little look at who I am, what I love and the future I hope to create.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#about">Explore my story ↓</a>
+        <button class="btn ghost" onclick="window.print()">Print / Save as PDF</button>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="monogram">DKH</div>
+      <h2>Dream big. Keep creating.</h2>
+      <p>Curious · Determined · Creative</p>
+    </aside>
+  </div>
+</section>
+
+<main>
+  <section class="section" id="about">
+    <div class="section-head"><div class="kicker">01 · My story</div><h2>About Me</h2><p class="section-intro">A few words about the person behind the portfolio.</p></div>
+    <div class="about">
+      <article class="card"><p>I am a creative, curious and observant person. I enjoy discovering new ideas, exploring my interests and learning about the world around me. I am thoughtful and independent, and I always try to stay focused on my goals. I believe that every experience is an opportunity to learn, grow and become a better version of myself.</p></article>
+      <aside class="quote-card"><blockquote>“Be yourself, follow your dreams, and never stop growing.”</blockquote><small>A thought to live by</small></aside>
+    </div>
+  </section>
+
+  <section class="section" id="personality">
+    <div class="section-head"><div class="kicker">02 · What makes me, me</div><h2>My Personality</h2><p class="section-intro">Three qualities that describe the way I approach life and learning.</p></div>
+    <div class="grid">
+      <article class="card"><div class="icon">✦</div><h3>Determined</h3><p>I stay focused on what I want to achieve and keep trying, even when something takes time.</p></article>
+      <article class="card"><div class="icon">◇</div><h3>Independent</h3><p>I enjoy thinking for myself, trusting my abilities and taking responsibility for my choices.</p></article>
+      <article class="card"><div class="icon">✧</div><h3>Creative</h3><p>I like exploring original ideas and finding interesting ways to express myself.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="passions">
+    <div class="section-head"><div class="kicker">03 · Things I enjoy</div><h2>My Hobbies & Passions</h2><p class="section-intro">Creativity is an important part of my life, whether I am designing, moving to music or making art.</p></div>
+    <div class="grid">
+      <article class="card"><div class="icon">▧</div><h3>Designing</h3><p>Creating beautiful designs, experimenting with ideas and giving imagination a visual form.</p></article>
+      <article class="card"><div class="icon">♫</div><h3>Dancing</h3><p>Expressing myself through movement and enjoying the energy of music.</p></article>
+      <article class="card"><div class="icon">♪</div><h3>Singing</h3><p>Enjoying music and using my voice as another way to express myself.</p></article>
+      <article class="card"><div class="icon">✿</div><h3>Art</h3><p>Exploring imagination, beauty and different ways of seeing the world.</p></article>
+      <article class="card"><div class="icon">🎾</div><h3>Tennis</h3><p>My favourite sport. I enjoy the focus, coordination, movement and determination it involves.</p></article>
+      <article class="card"><div class="icon">♡</div><h3>My Favourite Things</h3><p>My cat and my family are two of the most special things in my life.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="art">
+    <div class="section-head"><div class="kicker">04 · Art that inspires me</div><h2>My Favourite Art</h2><p class="section-intro">I admire creativity and the different ways people can express ideas through art.</p></div>
+    <div class="card">
+      <div class="art-row"><div class="art-placeholder">✎</div><div><h3>Favourite Artist · Leonardo da Vinci</h3><p>I admire Leonardo da Vinci for his creativity, imagination and curiosity across art and many areas of knowledge.</p></div></div>
+      <div class="art-row"><div class="art-placeholder">☁</div><div><h3>Favourite Artwork · <em>Le Nuage Rose</em></h3><p>This is a favourite artwork of mine. Its artistic style and visual character make it special to me.</p></div></div>
+      <p style="font-size:.8rem;color:#817687;margin-top:18px">Artwork note: the title “Le Nuage Rose” is shown as provided. The specific artwork image can be added once the artist or a reference image is confirmed.</p>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section-head"><div class="kicker">05 · What I bring</div><h2>My Skills & Hidden Talent</h2></div>
+    <div class="about">
+      <article class="card"><h3>My Skills</h3><div class="pills"><span class="pill">Communication</span><span class="pill">Creativity</span><span class="pill">Independence</span></div><p style="margin-top:18px">I value sharing ideas, thinking creatively and being able to work independently.</p></article>
+      <article class="card"><h3>My Hidden Talent</h3><p>My hidden talent is my ability to be creative in almost anything I do. I enjoy looking at things from different perspectives and finding ways to make ordinary ideas special.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="achievement">
+    <div class="section-head"><div class="kicker">06 · Growing every day</div><h2>My Greatest Achievement</h2></div>
+    <div class="achievement"><p>My greatest achievement is that I am continuously trying to become the <strong>best version of myself</strong>. I am proud of my journey, my efforts and my willingness to keep improving. I know that growth is a process, and every step forward matters.</p></div>
+  </section>
+
+  <section class="section" id="dreams">
+    <div class="section-head"><div class="kicker">07 · Looking ahead</div><h2>My Dreams</h2></div>
+    <div class="future"><h3>My dream is to become a successful doctor.</h3><p>I want to build a future where I can use my knowledge, dedication and skills to help people and make a positive difference in their lives.</p></div>
+  </section>
+
+  <section class="section" id="inspiration">
+    <div class="section-head"><div class="kicker">08 · Someone who motivates me</div><h2>My Inspiration</h2></div>
+    <article class="card"><div class="icon">♡</div><h3>My Dad</h3><p>The person who inspires me most is my dad. He is an important source of inspiration in my life. His influence encourages me to keep working towards my goals, believe in myself and think about the person I want to become.</p></article>
+  </section>
+
+  <section class="section" id="challenge">
+    <div class="section-head"><div class="kicker">09 · Learning and improving</div><h2>A Challenge I'm Working On</h2></div>
+    <article class="card"><h3>Speaking in Public</h3><p>One thing I find difficult is speaking in public. However, I understand that improving takes practice and patience. I am working on becoming more confident, expressing my thoughts clearly and feeling comfortable when speaking in front of others. I believe that every challenge is a chance to become stronger.</p></article>
+  </section>
+
+  <section class="section" id="motto">
+    <div class="section-head"><div class="kicker">10 · Words I live by</div><h2>My Favourite Motto</h2></div>
+    <div class="quote-card"><blockquote>“Follow your dreams and don't let anyone judge you or tell you what to do.”</blockquote><small>My personal motto</small></div>
+  </section>
+
+  <section class="section" id="future">
+    <div class="section-head"><div class="kicker">11 · The future me · 2036</div><h2>My Future Self</h2><p class="section-intro">A picture of the life I hope to build.</p></div>
+    <div class="future"><h3>Successful, happy and surrounded by family.</h3><p>When I imagine myself ten years from now, I see a successful doctor who is proud of everything she has accomplished. I imagine living a beautiful and happy life with my family, continuing to learn, achieving my dreams and enjoying all the wonderful experiences life has to offer. Most importantly, I hope my future self will still be creative, independent, determined and curious.</p></div>
+  </section>
+
+  <section class="section" id="letter">
+    <div class="section-head"><div class="kicker">12 · A note across time</div><h2>A Message to My Future Self</h2></div>
+    <div class="letter"><h3>Dear Future Dana,</h3><p>I hope you never forget the dreams you had when you were younger. Remember how determined you were to become a doctor and how much you wanted to make your family proud.</p><p>Keep believing in yourself, stay creative, and never stop learning.</p><p>Be proud of how far you have come.</p><p><strong>With love,<br>Dana Khalid Hamdan</strong></p></div>
+  </section>
+</main>
+
+<footer><strong>Dana Khalid Hamdan</strong><p>My story is still being written. · Dream big. Stay independent. Keep creating.</p></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.08});
+document.querySelectorAll('.card,.quote-card,.future,.achievement,.letter').forEach(el=>{el.classList.add('reveal');observer.observe(el);});
+</script>
+</body>
+</html>
